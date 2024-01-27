@@ -1,0 +1,13 @@
+public class ReverseAlphabet {
+    public static void main(String[] args) {
+        // ASCII values for uppercase English alphabets
+        int start = 'Z';
+        int end = 'A';
+
+        System.out.println("Alphabet in reverse order:");
+
+        for (int i = start; i >= end; i--) {
+            System.out.print((char) i + " ");
+        }
+    }
+}
