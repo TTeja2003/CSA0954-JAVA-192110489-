@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class testprime {
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+	     int countPrime = 0, countComposite = 0;
+       System.out.print("Enter the number of elements: ");
+       int numCount = scanner.nextInt();
+       System.out.println("Enter the numbers:");
+       for (int i = 0; i < numCount; i++) {
+           int num = scanner.nextInt();
+           if (num > 1) {
+               boolean isPrime = true;
+               for (int j = 2; j <= Math.sqrt(num); j++) {
+                   if (num % j == 0) {
+                       isPrime = false;
+                       break;
+                   }
+               }
+               if (isPrime) {
+                   countPrime++;
+               } else {
+                   countComposite++;
+               }
+           }
+       }
+       System.out.println("Composite number: " + countComposite);
+       System.out.println("Prime number: " + countPrime);
+   }
+}
