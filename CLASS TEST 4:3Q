@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class FactorFinder {
+
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+
+       System.out.print("Enter a number: ");
+       int num = sc.nextInt();
+       System.out.print("Enter the value of N: ");
+       int n = sc.nextInt();
+
+       int numFactors = countFactors(num);
+       int nthFactor = findNthFactor(num, n);
+
+       System.out.println("Number of factors = " + numFactors);
+       System.out.println(n + "th factor of " + num + " = " + nthFactor);
+   }
+
+   public static int countFactors(int num) {
+       int count = 0;
+       for (int i = 1; i <= Math.sqrt(num); i++) {
+           if (num % i == 0) {
+               count += 2; // Count both i and num/i as factors
+               if (i * i == num) { // If i is the square root, count it only once
+                   count--;
+               }
+           }
+       }
+       return count;
+   }
+
+   public static int findNthFactor(int num, int n) {
+       int count = 0;
+       int factor = 1;
+       while (count < n) {
+           if (num % factor == 0) {
+               count++;
+           }
+           factor++;
+       }
+       return factor - 1; // Adjust for the extra increment in the loop
+   }
+}
