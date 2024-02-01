@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class daystoyear{
+	public static void main(String[] args){
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("enter the days:");
+			int n=scanner.nextInt();
+		int r=n/365;
+		int w=(n%365)/7;
+		int d=(n%365)%7;
+		System.out.print(" years:"+r+"\n");
+			System.out.print("weeks:"+w+"\n");
+			System.out.print("days:"+d+"\n");
+
+	}
+}
