@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class numbersystem{
+	public static void main(String[] args){
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("enter the binary num:");
+		String bin=scanner.nextLine();
+		int dec=Integer.parseInt(bin,2);
+		System.out.println("the decimal num:"+dec);
+		String oct=Integer.toOctalString(dec);
+		System.out.println("the octal num:"+oct);
+
+
+
+
+	}
+}
