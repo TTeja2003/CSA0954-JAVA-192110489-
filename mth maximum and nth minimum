@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.Arrays;
+class mthmaximum{
+	public static void main(String[] args){
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("enter the size of array");
+		int size=scanner.nextInt();
+		System.out.print("enter the elements in array");
+		int[] array=new int[size];
+		for(int i=0;i<size;i++){
+			array[i]=scanner.nextInt();
+		}
+		System.out.print("enter the mth value for maximum:");
+		int m=scanner.nextInt();
+		System.out.print("enter the nth value for minimum:");
+		int n=scanner.nextInt();
+		Arrays.sort(array);
+		int mth=array[size-m];
+		int nth=array[n-1];
+		int sum=mth+nth;
+		int diff=mth-nth;
+		System.out.print("the mth maximum is:"+mth+ "\n");
+		System.out.print("the nth minimum is:"+nth+ "\n");
+		System.out.print("the sum is:"+sum+ "\n");
+		System.out.print("the difference is:"+diff +"\n");
+
+
+
+
+
+	}
+}
