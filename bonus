@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class bonus{
+	public static void main(String[] args){
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("enter the salary");
+		int n=scanner.nextInt();
+		System.out.print("enter the the grade of the employee \n");
+		System.out.print("1. agrade \n  2. bgrade");
+		int choice=scanner.nextInt();
+
+		double b;
+		double t;
+		if(choice==1){
+			 b=0.05*n;
+			 t= n+b;
+				System.out.println("the bonus is="+b);
+					System.out.println(" total to be paid="+t);}
+					if(choice==2){
+			 b=0.1*n;
+			 t= n+b;
+				System.out.println("the bonus is="+b);
+					System.out.println(" total to be paid="+t);}
+					if(n<10000){
+			 b=0.02*n;
+			t= n+b;
+				System.out.println("the bonus is="+b);
+					System.out.println(" total to be paid="+t);}
+					else{
+							System.out.println("invalid");}
+	}
+
+
+}
