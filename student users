@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class studentusers{
+	public static void main(String[] args){
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("enter the total users:");
+			int n=scanner.nextInt();
+			System.out.print("enter the staff  users:");
+			int s=scanner.nextInt();
+			int ns=s/3;
+				int st=(n-s-ns);
+			System.out.print("the student users are:"+st);
+	}
+}
+			
